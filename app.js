@@ -237,9 +237,24 @@ class RecipeApp {
 	}
 
 	// Inicializa eventos y carga diccionario
+	// Busca recetas iniciales para inspirar
+	async cargarRecetasIniciales() {
+		try {
+			this.ui.resultsMeta.textContent = "Cargando recetas de inspiración...";
+			const recetas = await this.buscarRecetasConAlternativas("pollo");
+			if (recetas) {
+				this.ui.renderRecetas(recetas);
+			}
+		} catch {
+			// Si falla, simplemente no muestra error
+		}
+	}
+
 	// Inicializa eventos y carga el diccionario
 	init() {
 		this.cargarDiccionario();
+		// Cargar recetas iniciales
+		this.cargarRecetasIniciales();
 		// Evento: ver receta
 		this.ui.resultsGrid.addEventListener("click", async (event) => {
 			const boton = event.target.closest("[data-ver-receta-id]");

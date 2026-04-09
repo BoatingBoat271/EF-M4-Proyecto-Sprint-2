@@ -36,11 +36,25 @@
     └── ingredientes-basicos.json  # Diccionario de ingredientes
 ```
 
-## 💡 ¿Cómo usarlo?
+## 💡 Instalacion y uso local
 
-1. Descarga o clona este repositorio.
-2. Abre el archivo `index.html` en tu navegador favorito.
-3. ¡Listo! Busca recetas por cualquier ingrediente y explora los resultados.
+```bash
+# 1) Clonar el repositorio
+git clone https://github.com/BoatingBoat271/EF-M4-Proyecto-Sprint-2.git
+
+# 2) Entrar al proyecto
+cd EF-M4-Proyecto-Sprint-2
+```
+
+Opciones para ejecutarlo:
+
+```bash
+# Opcion A: abrir index.html directamente
+# Opcion B: levantar servidor local (recomendado)
+npx --yes serve . -l 5502
+```
+
+Abre `http://localhost:5502` o visita la demo en vivo: https://boatingboat271.github.io/EF-M4-Proyecto-Sprint-2/
 
 ## 🌟 Demo rápida
 
